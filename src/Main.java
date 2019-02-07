@@ -8,17 +8,19 @@ class BankAccount {
 
     public double getBalance() { return balance; }
 
-    public double addBalance() {
-        double sum=50;
+    public double depositBalance() {
+        double sum=0;
+        double depositAmount=25;
 
-        sum += balance;
+        sum = balance + depositAmount;
         return sum;
     }
 
-    public double subBalance() {
-        double sum = 45;
+    public double withdrawBalance() {
+        double withdrawAmout = 10;
+        double sum =0;
 
-        sum-= balance;
+        sum = balance - withdrawAmout;
         return sum;
     }
 }
@@ -41,13 +43,10 @@ public class Main {
 
 
 
-        BankAccount bankAccount = new BankAccount(100);
-        BankAccount bankAccount1 = new BankAccount(100);
-        BankAccount bankAccount2 = new BankAccount(100);
-        System.out.println(bankAccount.getBalance());
-        System.out.println(bankAccount1.addBalance());
-        System.out.println(bankAccount2.subBalance());
-
+        BankAccount bankAccount = new BankAccount(600);
+        System.out.println("Initial Balance: "+bankAccount.getBalance());
+        System.out.println("Deposit Money: "+bankAccount.depositBalance());
+        System.out.println("Withdraw Money: "+bankAccount.withdrawBalance());
     }
 }
 
