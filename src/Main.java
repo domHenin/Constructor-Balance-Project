@@ -9,14 +9,27 @@ class BankAccount {
 
     public double depositBalance(double depositAmount) {
 //        double depositAmount=0;
-        balance += depositAmount;
+
+        if (depositAmount>-1){
+            balance += depositAmount;
+        }else {
+            System.out.println("Your Process Could Not Be Completed");
+        }
+
+
         return balance;
     }
 
     public double withdrawBalance(double withdrawAmout) {
 //        double sum =0;
 
-        balance -= withdrawAmout;
+        if (withdrawAmout>-1){
+            balance -= withdrawAmout;
+        }else {
+            System.out.println("Your Process Could Not Be Completed");
+        }
+
+
         return balance;
     }
 
@@ -44,11 +57,11 @@ public class Main {
         System.out.println("Initial Balance: "+bankAccount.getBalance());
 //test  System.out.println("Initial Balance: "+bankAccount1.getBalance());
         System.out.println("Deposit Money: "+bankAccount.depositBalance(25));
-        System.out.println("Withdraw Money: "+bankAccount.withdrawBalance(10));
+        System.out.println("Withdraw Money: "+bankAccount.withdrawBalance(-10));
 //test  BankAccount bankAccount1 = new BankAccount();
         System.out.println("Balance: "+bankAccount.changeBalance());
 
-        System.out.println("New Balance: "+bankAccount.withdrawBalance(50));
+//        System.out.println("New Balance: "+bankAccount.withdrawBalance(50));
     }
 }
 
@@ -65,3 +78,6 @@ public class Main {
 
 // fix hardcoding
 // update balance
+
+//add logic to depositBalance
+//add logic to withdrawBalance
