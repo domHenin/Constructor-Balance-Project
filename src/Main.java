@@ -1,41 +1,25 @@
 class BankAccount {
-    double addNumber;
-    double subNumber;
     private double balance;
-    private double addBalance;
-    private double subBalance;
-    double addAnswer;
-    double subAnswer;
-
-    public BankAccount(double initialBalance) { this.balance = initialBalance; }
 
 
-    public BankAccount(double initialBalance, double answer) {
-        this.balance = initialBalance;
-        this.addAnswer = answer;
-    }
+    public BankAccount(int initialBalance) { this.balance = initialBalance; }
 
-    public void setBalance(double balance) { this.balance = balance; }
+    public void setBalance(int balance) { this.balance = balance; }
 
     public double getBalance() { return balance; }
 
-    public void setAnswer(double answer) { this.addAnswer = answer; }
+    public double addBalance() {
+        double sum=50;
 
-    public double getAnswer() {
-        double sum;
-
-        sum = addAnswer + balance;
+        sum += balance;
         return sum;
     }
 
-    public double addBalance() {
-        addAnswer = addNumber + balance;
-        return addAnswer;
-    }
-
     public double subBalance() {
-        subAnswer = subNumber + balance;
-        return subAnswer;
+        double sum = 45;
+
+        sum-= balance;
+        return sum;
     }
 }
 
@@ -43,22 +27,26 @@ class BankAccount {
 
 public class Main {
     public static void main(String[] args) {
-        double balanceAdd;
-        double balanceSub;
-        double answer;
-//        System.out.println("Hello World!");
+        // Open (create) a bank account
+
+        // Set its initial balance to 600
+
+        // Withdraw 10 from that bank account
+
+        // Deposit 25 into that bank account
+
+        // Get the account's balance
+
+        // Output that balance to the console
+
+
+
         BankAccount bankAccount = new BankAccount(100);
-        BankAccount bankAccount1 = new BankAccount(100, 50);
-
-
-        System.out.println("This is the First Constructor: "+bankAccount.getBalance());
-        System.out.println("This is Second Constructor that addes: "+bankAccount1.getAnswer());
-
-
-
-
-
-
+        BankAccount bankAccount1 = new BankAccount(100);
+        BankAccount bankAccount2 = new BankAccount(100);
+        System.out.println(bankAccount.getBalance());
+        System.out.println(bankAccount1.addBalance());
+        System.out.println(bankAccount2.subBalance());
 
     }
 }
