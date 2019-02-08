@@ -1,6 +1,6 @@
-public class BankAccountBuild {
+public class BankAccount {
     private double balance;
-    public void BankAccountBuild(int initialBalance) { this.balance = initialBalance; }
+    public void BankAccount(int initialBalance) { this.balance = initialBalance; }
     public void setBalance(int balance) { this.balance = balance; }
     public double getBalance() { return balance; }
     public double depositBalance(double depositAmount) {
