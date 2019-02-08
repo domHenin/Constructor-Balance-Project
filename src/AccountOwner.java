@@ -1,8 +1,8 @@
-public class AccountOwnerBuild {
+public class AccountOwner {
     private String personName;
     private double personAcctNum;
 
-    public AccountOwnerBuild(String personName, double personAcctNum) {
+    public AccountOwner(String personName, double personAcctNum) {
         this.personName = personName;
         this.personAcctNum = personAcctNum;
     }
