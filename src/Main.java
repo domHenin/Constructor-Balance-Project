@@ -1,5 +1,11 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String setAccountName;
+        int setAccountNumber;
+
         BankAccount bankAccount = new BankAccount();
         AccountOwner person = new AccountOwner();
         AccountOwner person1 = new AccountOwner();
@@ -19,14 +25,24 @@ public class Main {
         System.out.println("Balance: "+bankAccount.changeBalance());
 
 //  Account Owner Code:
-        System.out.println("Name on Account: "+person.getPersonName());
-        System.out.println("Account Number: "+person.getPersonAcctNum()+ " for "+person.getPersonName());
-
-        person1.changePersonName();
-        person1.changePersonAccountNumber();
+        System.out.println("Name on Account: ");
+        setAccountName = input.next();
+        person1.changePersonName(setAccountName);
         System.out.println(person1.getPersonName());
+
+        System.out.println("Enter Account number for "+person1.getPersonName()+": ");
+        setAccountNumber = input.nextInt();
+        person1.changePersonAccountNumber(setAccountNumber);
         System.out.println(person1.getPersonAcctNum());
-// System.out.println("New Balance: "+bankAccount.withdrawBalance(50));
+
+//        System.out.println("Name on Account: "+person.getPersonName());
+//        System.out.println("Account Number: "+person.getPersonAcctNum()+ " for "+person.getPersonName());
+
+//        person1.changePersonName();
+//        person1.changePersonAccountNumber();
+//        System.out.println(person1.getPersonName());
+//        System.out.println(person1.getPersonAcctNum());
+//// System.out.println("New Balance: "+bankAccount.withdrawBalance(50));
 
 
     }
