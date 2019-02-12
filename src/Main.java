@@ -12,7 +12,7 @@ public class Main {
 //test BankAccount bankAccount1 = new BankAccount();
         System.out.println("Balance: "+bankAccount.changeBalance());
         System.out.println("Name on Account: "+person.getPersonName());
-        System.out.println("Account Number: "+person.getPersonName()+ " for "+person.getPersonName());
+        System.out.println("Account Number: "+person.getPersonAcctNum()+ " for "+person.getPersonName());
 // System.out.println("New Balance: "+bankAccount.withdrawBalance(50));
     }
 }
